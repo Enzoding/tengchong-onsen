@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>泡在腾冲 · 十五处温泉索引</title>
+<meta name="description" content="腾冲与滇西十五处温泉的索引：到达方式、价格、水温手感与避坑。整理自播客《滇南路谈》第十三期。">
+<link rel="stylesheet" href="tokens.css">
+<style>
+/* Hallmark · genre: editorial · macrostructure: Index-First · theme: Garden
+ * nav: N6 Newspaper masthead · footer: Ft4 Dense colophon · enrichment: none (typography only)
+ * anchor hue: leaf-green oklch(47% 0.13 140) · paper: warm oat cream oklch(95.5% 0.022 92)
+ * pre-emit critique: P5 H4 E5 S5 R5 V5
+ * font note: Garden's Young Serif + Hanken Grotesk substituted for a system CJK stack —
+ *            mainland-China reachability; serif-display / sans-body pairing preserved.
+ * slop test: 58/58 ✓ — gates fixed this run: 38 (mono outlier down to 2 slots),
+ *            33/45 (■ mark now real text + assistive twin), 44a (masthead padding ratio 2.0×)
+ * contrast: pass (40–41, measured in-browser) · mobile: pass (34, 49, 50–57) · honest: pass (46)
+ * chrome: pass (47) · tokens: pass (48) · nav/footer/hero: pass (42–45) · icons: pass (30)
+ */
+
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; padding: 0; }
+
+html, body { overflow-x: clip; }          /* never `hidden` — gate 34 */
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: var(--lh-relaxed);
+  font-variant-numeric: tabular-nums;
+  -webkit-font-smoothing: antialiased;
+  text-wrap: pretty;
+  padding-bottom: max(var(--space-xl), env(safe-area-inset-bottom));
+}
+
+a { color: var(--color-accent-text); text-decoration: underline;
+    text-decoration-thickness: 1px; text-underline-offset: 3px;
+    text-decoration-color: var(--color-rule-2); }
+a:hover { text-decoration-color: currentColor; }
+a:active { color: var(--color-ink); }
+:focus-visible { outline: var(--rule-heavy) solid var(--color-focus); outline-offset: 3px;
+                 border-radius: 2px; }
+
+.shell { max-width: var(--page-max); margin-inline: auto;
+         padding-inline: max(clamp(1rem, 4vw, 2.5rem), env(safe-area-inset-left)); }
+
+/* ─── N6 · Newspaper masthead ─────────────────────────────────────────── */
+.masthead { padding-block: var(--space-lg) var(--space-2xl); text-align: center; }
+.masthead__issue {
+  font-family: var(--font-label);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-label);
+  color: var(--color-neutral);
+  text-transform: uppercase;
+  margin-bottom: var(--space-sm);
+}
+.masthead__wordmark {
+  font-family: var(--font-display);
+  font-weight: var(--display-weight);
+  font-style: var(--display-style);
+  font-size: var(--text-display);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-display);
+  overflow-wrap: anywhere;   /* gate 51 */
+  min-width: 0;
+}
+.masthead__tagline {
+  margin-top: var(--space-xs);
+  font-size: var(--text-md);
+  color: var(--color-ink-2);
+}
+.masthead__rule {
+  margin-top: var(--space-md);
+  border-top: var(--rule-heavy) solid var(--color-rule-2);
+  border-bottom: var(--rule-hair) solid var(--color-rule-2);
+  height: 3px;
+}
+
+/* one orchestrated entrance — nothing else animates */
+@media (prefers-reduced-motion: no-preference) {
+  .masthead__wordmark, .masthead__issue, .masthead__tagline {
+    animation: rise var(--dur-med) var(--ease-out) backwards;
+  }
+  .masthead__issue { animation-delay: 0ms; }
+  .masthead__wordmark { animation-delay: 60ms; }
+  .masthead__tagline { animation-delay: 120ms; }
+}
+@keyframes rise { from { opacity: 0; transform: translateY(6px); } }
+
+/* ─── Opening ─────────────────────────────────────────────────────────── */
+.opening { padding-block: 0 var(--space-2xl); }
+.opening__label {
+  font-family: var(--font-label);
+  font-size: var(--text-sm);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-neutral);
+  padding-bottom: var(--space-xs);
+  border-bottom: var(--rule-hair) solid var(--color-rule);
+  margin-bottom: var(--space-md);
+}
+.opening p { max-width: var(--measure); }
+.opening p + p { margin-top: var(--space-sm); }
+
+/* ─── Section band ────────────────────────────────────────────────────── */
+.band {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: var(--display-weight);
+  font-style: var(--display-style);
+  font-size: var(--text-xl);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tracking-tight);
+  overflow-wrap: anywhere;
+  min-width: 0;
+  padding-bottom: var(--space-xs);
+  margin-bottom: var(--space-md);
+  border-bottom: var(--rule-heavy) solid var(--color-ink);
+}
+section { scroll-margin-top: var(--space-sm); }
+.block { margin-bottom: var(--section-gap, var(--space-3xl)); }
+
+/* ─── The index ───────────────────────────────────────────────────────── */
+.index-list { list-style: none; }
+.index-list li { border-top: var(--rule-hair) solid var(--color-rule); }
+.index-list li:last-child { border-bottom: var(--rule-hair) solid var(--color-rule); }
+
+.index-row {
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr);   /* gate 50 */
+  gap: var(--space-xs) var(--space-sm);
+  align-items: baseline;
+  padding-block: var(--space-xs);
+  color: inherit;
+  text-decoration: none;              /* the row is the affordance, not the name */
+}
+.index-row:hover .index-row__name,
+.index-row:focus-visible .index-row__name {
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent);
+  text-underline-offset: 3px;
+}
+@media (hover: none) {                 /* touch gets the same signal, statically */
+  .index-row__name { text-decoration: underline;
+                     text-decoration-color: var(--color-rule-2);
+                     text-underline-offset: 3px; }
+}
+.index-row__num {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-neutral);
+}
+.index-row__name { font-weight: 600; }
+.index-row__name a { color: var(--color-ink); text-decoration-color: var(--color-rule-2); }
+.index-row__meta {
+  grid-column: 2;
+  font-size: var(--text-sm);
+  color: var(--color-ink-2);
+  line-height: var(--lh-normal);
+}
+.index-row__meta .sep { color: var(--color-neutral); margin-inline: var(--space-3xs); }
+.index-row__price { color: var(--color-accent-text); font-weight: 600; }
+.index-note { margin-top: var(--space-sm); font-size: var(--text-sm); color: var(--color-ink-2); }
+
+/* ─── Legend for the marks ────────────────────────────────────────────── */
+.legend {
+  font-size: var(--text-sm);
+  color: var(--color-ink-2);
+  margin-bottom: var(--space-md);
+}
+.legend__mark { color: var(--color-accent); padding-inline-end: 0.35em; }
+
+/* ─── Detail entries ──────────────────────────────────────────────────── */
+.entry { padding-block: var(--space-lg); border-top: var(--rule-hair) solid var(--color-rule); }
+.entry:first-of-type { border-top: 0; padding-top: 0; }
+.entry__name {
+  font-family: var(--font-display);
+  font-weight: var(--display-weight);
+  font-style: var(--display-style);
+  font-size: var(--text-lg);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tracking-tight);
+  overflow-wrap: anywhere;
+  min-width: 0;
+}
+.entry__mark {
+  font-family: var(--font-body);
+  font-size: 0.6em;
+  color: var(--color-accent);
+  vertical-align: 0.2em;
+  margin-inline-end: var(--space-3xs);
+}
+/* the ■ mark carries meaning, so it ships as real text with an assistive twin */
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: clip;
+  clip-path: inset(50%); white-space: nowrap; border: 0;
+}
+.entry__lede { margin-top: var(--space-2xs); max-width: var(--measure); color: var(--color-ink-2); }
+
+/* fact rows */
+.facts { margin-top: var(--space-sm); }
+.facts > div {
+  display: grid;
+  grid-template-columns: 5rem minmax(0, 1fr);
+  gap: var(--space-2xs) var(--space-sm);
+  padding-block: var(--space-2xs);
+  border-top: var(--rule-hair) solid var(--color-rule);
+  align-items: baseline;          /* label sits on the value's first baseline — no nudge value */
+}
+.facts dt {
+  font-family: var(--font-label);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-label);
+  color: var(--color-neutral);
+  line-height: var(--lh-normal);
+}
+.facts dd { font-size: var(--text-base); line-height: var(--lh-normal); }
+.facts dd strong { font-weight: 600; }
+
+.note {
+  margin-top: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--tint-moss);
+  border-radius: var(--radius-card);
+  font-size: var(--text-base);
+  line-height: var(--lh-normal);
+}
+.note--warn { background: var(--tint-clay); }
+.note__lead { font-weight: 700; color: var(--color-clay-text); }
+.note--warn .note__lead { color: var(--color-clay-text); }
+.note--quiet .note__lead { color: var(--color-accent-text); }
+
+/* ─── Ethics band ─────────────────────────────────────────────────────── */
+.ethics {
+  background: var(--tint-clay);
+  border-top: var(--rule-heavy) solid var(--color-clay-text);
+  padding: var(--space-lg) var(--space-md);
+  border-radius: var(--radius-card);
+}
+.ethics .band { border-bottom-color: var(--color-clay-text); color: var(--color-clay-text); }
+.ethics p + p { margin-top: var(--space-sm); }
+.ethics p { max-width: var(--measure); }
+
+/* ─── Tips ────────────────────────────────────────────────────────────── */
+.tips { list-style: none; }
+.tips li {
+  padding: var(--space-xs) 0 var(--space-xs) var(--space-md);
+  border-top: var(--rule-hair) solid var(--color-rule);
+  position: relative;
+}
+.tips li::before {
+  content: "";
+  position: absolute; inset-inline-start: 0; top: calc(var(--space-xs) + 0.62em);
+  width: 5px; height: 5px; border-radius: 50%;
+  background: var(--color-accent);
+}
+.tips strong { font-weight: 600; }
+
+/* ─── Plan ────────────────────────────────────────────────────────────── */
+.plan { border-top: var(--rule-hair) solid var(--color-rule); }
+.plan__step {
+  display: grid; grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-2xs);
+  padding-block: var(--space-sm);
+  border-bottom: var(--rule-hair) solid var(--color-rule);
+}
+.plan__when {
+  font-family: var(--font-label);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-label);
+  color: var(--color-accent-text);
+}
+
+/* ─── Ft4 · Dense colophon footer ─────────────────────────────────────── */
+.colophon {
+  border-top: var(--rule-heavy) solid var(--color-ink);
+  padding-block: var(--space-md) var(--space-xl);
+  font-size: var(--text-sm);
+  line-height: var(--lh-normal);
+  color: var(--color-ink-2);
+}
+.colophon p + p { margin-top: var(--space-2xs); }
+.colophon__head {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-label);
+  color: var(--color-neutral);
+  margin-bottom: var(--space-xs);
+}
+.colophon__caveat { color: var(--color-neutral); }
+
+/* ─── Multi-column only where it earns it ─────────────────────────────── */
+@media (min-width: 40rem) {
+  .index-row { grid-template-columns: 2.5rem minmax(0, 1fr); }
+  .facts > div { grid-template-columns: 6rem minmax(0, 1fr); }
+}
+@media (min-width: 60rem) {
+  .index-row {
+    grid-template-columns: 2.5rem minmax(0, 1fr) auto;   /* name · price column */
+    align-items: baseline;
+  }
+  .index-row__meta { grid-column: 2; }
+  .index-row__price-cell {
+    grid-column: 3; grid-row: 1;
+    text-align: right;
+    font-size: var(--text-sm);
+    color: var(--color-accent-text);
+    font-weight: 600;
+  }
+  .index-row__meta .price-inline { display: none; }   /* no duplication */
+}
+@media (max-width: 59.999rem) {
+  .index-row__price-cell { display: none; }
+}
+</style>
+</head>
+<body>
+
+<header class="masthead shell">
+  <p class="masthead__issue">索引 · 滇西 · 腾冲</p>
+  <p class="masthead__wordmark">泡在腾冲</p>
+  <p class="masthead__tagline">从三十元的农家泡池,到五星私汤</p>
+  <div class="masthead__rule"></div>
+</header>
+
+<main class="shell">
+
+  <!-- ── Opening ─────────────────────────────────────────────────────── -->
+  <section class="opening">
+    <p class="opening__label">十五处温泉 · 腾冲与滇西 · 录制于二〇二六年二月</p>
+    <p>这份索引整理自播客《滇南路谈》第十三期。讲述者是一对在腾冲生活两年半的旅居者,亲手泡过三十多家温泉。</p>
+    <p>下面按「你愿意跑多远」分三段列出:打车就能到的、自驾才去的、值得专程的。每一处都标了到达方式、价格与水温手感;播客没提到的地方写「—」,不替他们补。</p>
+  </section>
+
+  <!-- ── The index ───────────────────────────────────────────────────── -->
+  <section class="block" id="index">
+    <h2 class="band">索引</h2>
+    <ul class="index-list">
+      <li>
+        <a class="index-row" href="#dongsan-street">
+          <span class="index-row__num">01</span>
+          <span class="index-row__name">洞山村农家温泉一条街</span>
+          <span class="index-row__price-cell">约 30 元 / 间</span>
+          <span class="index-row__meta">腾冲 · 市区 <span class="sep">·</span> 偏烫 <span class="sep">·</span> <span class="price-inline index-row__price">约 30 元 / 间泡池</span></span>
+        </a>
+      </li>
+      <li>
+        <a class="index-row" href="#dongsan-resort">
+          <span class="index-row__num">02</span>
+          <span class="index-row__name">洞山温泉度假村</span>
+          <span class="index-row__price-cell">约 50 元</span>
+          <span class="index-row__meta">腾冲 · 市区 <span class="sep">·</span> 38–42℃ <span class="sep">·</span> <span class="price-inline index-row__price">约 50 元,含一杯饮品</span></span>
+        </a>
+      </li>
+      <li>
+        <a class="index-row" href="#dujuanwang">
+          <span class="index-row__num">03</span>
+          <span class="index-row__name">杜鹃王森林温泉</span>
+          <span class="index-row__price-cell">—</span>
+          <span class="index-row__meta">腾冲 · 和顺古镇附近 <span class="sep">·</span> 水温未提及</span>
+        </a>
+      </li>
+      <li>
+        <a class="index-row" href="#bailian">
+          <span class="index-row__num">04</span>
+          <span class="index-row__name">柏联温泉</span>
+          <span class="index-row__price-cell">—</span>
+          <span class="index-row__meta">腾冲 · 和顺古镇内 <span class="sep">·</span> 水温未提及</span>
+        </a>
+      </li>
+      <li>
+        <a class="index-row" href="#yuechun">
+          <span class="index-row__num">05</span>
+          <span class="index-row__name">悦椿温泉</span>
+          <span class="index-row__price-cell">—</span>
+          <span class="index-row__meta">腾冲 · 市区方向 <span class="sep">·</span> 水温未提及</span>
+        </a>
+      </li>
+      <li>
+        <a class="index-row" href="#mayugu">
+          <span class="index-row__num">06</span>
+          <span class="index-row__name">玛御谷私汤</span>
+          <span class="index-row__price-cell">不到 100 元</span>
+          <span class="index-row__meta">腾冲 · 玛御谷 <span class="sep">·</span> 温和 <span class="sep">·</span> <span class="price-inline index-row__price">不到 100 元 / 泡池</span></span>
+        </a>
+      </li>
+      <li>
+        <a class="index-row" href="#hetou">
+          <span class="index-row__num">07</span>
+          <span class="index-row__name">河头天然温泉</span>
+          <span class="index-row__price-cell">—</span>
+          <span class="index-row__meta">腾冲 · 高黎贡山腰 <span class="sep">·</span> 水温未提及</span>
+        </a>
+      </li>
+      <li>
+        <a class="index-row" href="#laxing-coop">
+          <span class="index-row__num">08</span>
+          <span class="index-row__name">腊幸供销社温泉</span>
+          <span class="index-row__price-cell">便宜,未给具体价</span>
+          <span class="index-row__meta">腾冲 · 滇滩镇 <span class="sep">·</span> 硫磺泉 <span class="sep">·</span> <span class="price-inline index-row__price">便宜,播客未给具体价</span></span>
+        </a>
+      </li>
+      <li>
+        <a class="index-row" href="#laxing-wild">
+          <span class="index-row__num">09</span>
+          <span class="index-row__name">腊幸野温泉</span>
+          <span class="index-row__price-cell">泡脚 5 元起</span>
+          <span class="index-row__meta">腾冲 · 露天泉眼 <span class="sep">·</span> 很高 <span class="sep">·</span> <span class="price-inline index-row__price">早期免费,现泡脚 5 元起</span></span>
+        </a>
+      </li>
+      <li>
+        <a class="index-row" href="#diyang">
+          <span class="index-row__num">10</span>
+          <span class="index-row__name">底养温泉</span>
+          <span class="index-row__price-cell">—</span>
+          <span class="index-row__meta">梁河 · 临江 <span class="sep">·</span> 水温未提及</span>
+        </a>
+      </li>
+      <li>
+        <a class="index-row" href="#denggeng">
+          <span class="index-row__num">11</span>
+          <span class="index-row__name">登梗澡堂</span>
+          <span class="index-row__price-cell">—</span>
+          <span class="index-row__meta">怒江 · 江边 <span class="sep">·</span> 水温未提及</span>
+        </a>
+      </li>
+      <li>
+        <a class="index-row" href="#banglazhang">
+          <span class="index-row__num">12</span>
+          <span class="index-row__name">邦腊掌温泉</span>
+          <span class="index-row__price-cell">住宿约 500 元</span>
+          <span class="index-row__meta">龙陵 · 深山 <span class="sep">·</span> <span class="price-inline index-row__price">温泉票可单买,家庭套房约 500 元</span></span>
+        </a>
+      </li>
+      <li>
+        <a class="index-row" href="#eryuan">
+          <span class="index-row__num">13</span>
+          <span class="index-row__name">洱源温泉</span>
+          <span class="index-row__price-cell">房间大几百 / 晚</span>
+          <span class="index-row__meta">大理 · 洱源县 <span class="sep">·</span> <span class="price-inline index-row__price">房间一晚大几百</span></span>
+        </a>
+      </li>
+      <li>
+        <a class="index-row" href="#baihualing">
+          <span class="index-row__num">14</span>
+          <span class="index-row__name">阴阳泉</span>
+          <span class="index-row__price-cell">进山维护费</span>
+          <span class="index-row__meta">百花岭 · 徒步线上 <span class="sep">·</span> 一高一低两池</span>
+        </a>
+      </li>
+      <li>
+        <a class="index-row" href="#lushui">
+          <span class="index-row__num">15</span>
+          <span class="index-row__name">泸水野温泉一带</span>
+          <span class="index-row__price-cell">—</span>
+          <span class="index-row__meta">怒江 · 泸水 <span class="sep">·</span> 讲述者未亲泡,仅作方向</span>
+        </a>
+      </li>
+    </ul>
+    <p class="index-note">「—」表示播客中未提及,不代表免费或不可去。价格与水温均为二〇二六年二月录制时的情形。</p>
+  </section>
+
+  <!-- ── 打车就能到 ───────────────────────────────────────────────────── -->
+  <section class="block" id="city">
+    <h2 class="band">打车就能到</h2>
+    <p class="legend"><span class="legend__mark">■</span>标记的是讲述者最常去、或最常带外地朋友去的几处。</p>
+
+    <article class="entry entry--pick" id="dongsan-street">
+      <h3 class="entry__name"><span class="entry__mark" aria-hidden="true">■</span><span class="sr-only">首推 · </span>洞山村农家温泉一条街</h3>
+      <p class="entry__lede">219 国道边一整条街的农家泡池。农户把自家院子或一楼改成一个个小单间——简陋,但极有本地生活气。地热在这里富裕到「排水沟里流的都是温泉水」。</p>
+      <dl class="facts">
+        <div><dt>导航</dt><dd>「腾冲洞山温泉村」,城南约 6 公里,离市区开车约 <strong>5 分钟</strong></dd></div>
+        <div><dt>价格</dt><dd>约 <strong>30 元 / 间泡池</strong>,2–3 人,名义泡 2–3 小时,实际基本不限时</dd></div>
+        <div><dt>水温</dt><dd><strong>明显偏烫</strong>,比度假村高;老板会给你配冷热水。本地人耐受力强,爱坐近泉眼</dd></div>
+        <div><dt>设施</dt><dd>铺瓷砖的浴室砌一个池子(约 2 m³,房间 4–5 ㎡)、一个淋浴、几把板凳、一排挂钩。无景致,不提供洗漱用品</dd></div>
+        <div><dt>周边</dt><dd>街上烧烤小吃多,也有卖泳衣的,<strong>小几十元</strong>一套,不用提前买</dd></div>
+      </dl>
+      <p class="note note--quiet"><span class="note__lead">店主很温和。</span>那种性格平和的腾冲人,非常好打交道。泡完通常又饿又困,正好在街上吃一顿烧烤。</p>
+      <p class="note note--warn"><span class="note__lead">避坑:</span>节气(如小雪)和周末会被挤爆,周边城市(云 A、云 L)车牌很多,连找四五家都可能没池子。务必错峰,或提前问。</p>
+    </article>
+
+    <article class="entry entry--pick" id="dongsan-resort">
+      <h3 class="entry__name"><span class="entry__mark" aria-hidden="true">■</span><span class="sr-only">首推 · </span>洞山温泉度假村</h3>
+      <p class="entry__lede">整条街上规模最大的一家,一个大型温泉集合体。最适合游客:便利、体面,价格却没有飘。</p>
+      <dl class="facts">
+        <div><dt>到达</dt><dd>打车从市区 <strong>不到 20 分钟</strong>;营业到 <strong>23:00 左右</strong></dd></div>
+        <div><dt>门票</dt><dd>约 <strong>50 元</strong>,含一杯饮品(牛奶或咖啡)</dd></div>
+        <div><dt>入口区</dt><dd>六七个功能大池:牛奶浴、中药药浴、白酒池…每个池上都有配方说明</dd></div>
+        <div><dt>内场</dt><dd>往里走有近 <strong>20 个小池</strong>,以腾冲乡镇命名(腾越池、曲石池…),形状不规则、鹅卵石与丛林环绕,<strong>三五人刚好,私密性极好</strong></dd></div>
+        <div><dt>加分项</dt><dd>按摩池(按一下感应装置,背部和脚底喷水柱)、人造沙滩与游泳池、可躺看星空的露天池</dd></div>
+        <div><dt>水温</dt><dd>约 <strong>38–42℃</strong>,每个池边都有显示屏报温度</dd></div>
+        <div><dt>吃饭</dt><dd>里面有食堂:炒饭、米线、饵丝,<strong>米线饵丝不到 10 元</strong></dd></div>
+      </dl>
+      <p class="note note--warn"><span class="note__lead">关键技巧:</span>这里也有旅行团。<strong>晚上 8 点后再进去</strong>,团客已散,人少体验翻倍;泡两三个小时完全够。</p>
+    </article>
+
+    <article class="entry" id="dujuanwang">
+      <h3 class="entry__name">杜鹃王森林温泉</h3>
+      <p class="entry__lede">和洞山温泉村同一水准的服务:进门给浴袍、防水手机袋,流程规范,环境舒服,周边是高大的松树林。位置在和顺古镇附近,打车方便。</p>
+    </article>
+
+    <article class="entry" id="bailian">
+      <h3 class="entry__name">柏联温泉</h3>
+      <p class="entry__lede">在和顺古镇里面。设施成熟的品牌温泉,适合作为备选。</p>
+    </article>
+
+    <article class="entry" id="yuechun">
+      <h3 class="entry__name">悦椿温泉</h3>
+      <p class="entry__lede">在市区方向,属可打车抵达的一类。讲述者只提到名字,没有展开体验。</p>
+    </article>
+
+    <article class="entry entry--pick" id="mayugu">
+      <h3 class="entry__name"><span class="entry__mark" aria-hidden="true">■</span><span class="sr-only">首推 · </span>玛御谷私汤</h3>
+      <p class="entry__lede">玛御谷是当地比较豪华的旅居小区,里面的私汤包间性价比意外地好:约 10 ㎡ 小套间带小阳台,池子约 2 ㎡,地板、墙面、天花板的装修都明显好过农家温泉,阳台外有植被。</p>
+      <dl class="facts">
+        <div><dt>价格</dt><dd>不到 <strong>100 元 / 泡池</strong></dd></div>
+      </dl>
+      <p class="note note--quiet"><span class="note__lead">免费彩蛋:</span><strong>玛御谷公交站的泡脚池</strong>——全天有流动温泉水,免费。面积比东湖那个大得多,总能找到位置;坐成一排泡脚很容易聊起来,是当地人的社交场。东湖附近也有一个泡脚池,但人多到肩并肩脚挨脚,很难插进去。</p>
+    </article>
+  </section>
+
+  <!-- ── 自驾野趣 ─────────────────────────────────────────────────────── -->
+  <section class="block" id="drive">
+    <h2 class="band">自驾野趣</h2>
+    <p class="legend">离城越远,水越好,路越硬派。</p>
+
+    <article class="entry entry--pick" id="hetou">
+      <h3 class="entry__name"><span class="entry__mark" aria-hidden="true">■</span><span class="sr-only">首推 · </span>河头天然温泉</h3>
+      <p class="entry__lede">在高黎贡山山腰的河头村。山头视野、茂密植被、池子很大、水质清澈见底——随手拍发小红书就火了。</p>
+      <dl class="facts">
+        <div><dt>路线</dt><dd>腾冲往北到 <strong>曲石镇</strong>,再往山上走;高德地图可直接搜到</dd></div>
+        <div><dt>车程</dt><dd>市区出发 <strong>1–2 小时</strong>;路面已硬化,但<strong>坡度大</strong>,新手司机要留神</dd></div>
+        <div><dt>顺带</dt><dd>河头有养殖<strong>三文鱼</strong>的人家,可以直接吃;村边还有<strong>徒步高黎贡的路线起点</strong>,可问当地老板或看路牌找向导——一趟同时满足徒步和泡温泉</dd></div>
+      </dl>
+    </article>
+
+    <article class="entry" id="laxing-coop">
+      <h3 class="entry__name">腊幸供销社温泉</h3>
+      <p class="entry__lede">名字里的「供销社」就暴露了资历——当地非常老牌的一家硫磺泉,一进院子就能闻到那股味道。规模大、团客多(大巴一车车拉中老年人来),价格不贵。在腾冲以北的 <strong>滇滩镇</strong>,已经很接近缅甸,光污染少,<strong>晚上适合看星空</strong>。沿线可以串云峰山、银杏村。</p>
+      <p class="note note--warn"><span class="note__lead">注意:</span>更衣间卫生条件偏简陋。如果想舒服点,<strong>可以直接在温泉住一晚</strong>,换衣冲澡的环境会好很多。</p>
+    </article>
+
+    <article class="entry" id="laxing-wild">
+      <h3 class="entry__name">腊幸野温泉</h3>
+      <p class="entry__lede">完全露天的泉眼,温泉水直接冒出来,温度很高,所以泉眼被围了起来,旁边又新辟了若干小泡池。变迁很典型:最早<strong>完全免费</strong> → 后来泡脚 5 元/人 → 现在加了设施可泡澡、可游泳,价格也涨了,已成旅行大巴的打卡点。</p>
+    </article>
+  </section>
+
+  <!-- ── 滇西延伸 ─────────────────────────────────────────────────────── -->
+  <section class="block" id="west">
+    <h2 class="band">滇西延伸</h2>
+    <p class="legend">这些不在腾冲市区,但值得专程跑一趟。</p>
+
+    <article class="entry entry--pick" id="diyang">
+      <h3 class="entry__name"><span class="entry__mark" aria-hidden="true">■</span><span class="sr-only">首推 · </span>底养温泉</h3>
+      <p class="entry__lede">临江而建,主体是两个大泳池(约标准泳池大小):左边多是男性,右边是女性和小孩。泡在江边看晚霞、听江水声,是这对旅居者两年多里数一数二的体验。</p>
+      <dl class="facts">
+        <div><dt>怎么去</dt><dd>山路很不好走。<strong>推荐坐轮渡</strong>——到码头坐船,逆江而上 <strong>10–15 分钟</strong> 即到(越野车加老司机也可考虑开车,但要掂量)</dd></div>
+        <div><dt>水情</dt><dd>位于<strong>梁河温泉最上游</strong>。本地大哥的说法是:下面的水都从这儿流过去,所以这里的水最好</dd></div>
+        <div><dt>环境</dt><dd>石头砌的水池,男女更衣室各一间(铁棚搭的),有热水淋浴,条件确实一般;下船是一片<strong>鹅卵石江滩</strong>,常有人在那烧烤</dd></div>
+      </dl>
+      <p class="note note--quiet"><span class="note__lead">最好的时刻:</span>夕阳将临前坐船抵达,靠在临江一侧看晚霞——方向不直接对日落,但江边晚霞极美。</p>
+      <p class="note note--warn"><span class="note__lead">提醒:</span>本地人很多,<strong>外地女性单独前往可能不太敢下水</strong>——上次八个人(四男四女)只有三人真泡了。建议先搜照片评估接受度。<strong>另外:元旦时有朋友去说正在整修,出发前务必确认营业。</strong></p>
+    </article>
+
+    <article class="entry" id="denggeng">
+      <h3 class="entry__name">登梗澡堂</h3>
+      <p class="entry__lede">紧挨着怒江湍急流水建的一片小池子,就在国道旁。本地人在此泡澡,甚至有老娘娘直接裸泡——这已是当地的文化习惯,没人觉得羞耻。在澡堂就能看到修建在怒江江上的<strong>溜索</strong>。位置在接近泸水的方向。</p>
+      <p class="note note--warn"><span class="note__lead">提醒:</span>几乎没有更衣室和淋浴,就地脱衣泡。环境简陋,介意者绕开;想去请先搜照片量力而行。</p>
+    </article>
+
+    <article class="entry entry--pick" id="banglazhang">
+      <h3 class="entry__name"><span class="entry__mark" aria-hidden="true">■</span><span class="sr-only">首推 · </span>邦腊掌温泉</h3>
+      <p class="entry__lede">谐音「不老汤」。藏在深山里的封闭式度假区,温泉区和酒店区分开,规模极大。</p>
+      <dl class="facts">
+        <div><dt>到达</dt><dd>去温泉要在酒店前台叫 <strong>摆渡车</strong></dd></div>
+        <div><dt>规模</dt><dd>温泉池约 <strong>五六十个</strong>;有一面山坡全是温泉泉眼(像缩小版热海),景区中间有河流过,河旁多处冒热气</dd></div>
+        <div><dt>鱼疗</dt><dd>进区先是大鱼池和小鱼池。<strong>大鱼池的鱼有半个脚掌大</strong>,啄起来有点疼;小鱼池体验好,鱼不怕人,会围着手转,很痒很舒服</dd></div>
+        <div><dt>价格</dt><dd>可单买温泉票;<strong>推荐住一晚</strong>——家庭套房约 <strong>500 元</strong>(滇西算高价,摊下来划算),住宿条件好、维护到位,房间望出去是大泳池和小山丘</dd></div>
+        <div><dt>餐饮</dt><dd>早中晚都能在度假村解决(<strong>点不到外卖</strong>);早上在餐厅外能看到黄臀鹎、红臀鹎等小鸟</dd></div>
+      </dl>
+      <p class="note note--quiet"><span class="note__lead">客群:</span>本地人来得多,氛围接地气。</p>
+    </article>
+
+    <article class="entry" id="eryuan">
+      <h3 class="entry__name">洱源温泉</h3>
+      <p class="entry__lede">大型温泉酒店(房间一晚大几百)。最妙的设计是在巨大泳池中央立了一块巨幕、旁边架投影仪——泡在池子里直接看电影,被戏称「滇西版汽车影院」;周边沙滩椅、饮料、零食齐全,很像豪华度假村。洱源是洱海的源头,<strong>一定要买一份新鲜牛奶边泡边喝</strong>。周边有茈碧湖、西湖,景色很好,而且一直不算旅游热门地——去大理不想挤人群就选这里,烧烤也很好吃。</p>
+    </article>
+
+    <article class="entry" id="baihualing">
+      <h3 class="entry__name">阴阳泉</h3>
+      <p class="entry__lede">百花岭徒步路线上的一片野温泉:一池水温高、一池水温低,故名阴阳泉。人泡得进去,但<strong>完全没地方换衣服</strong>,通常只能泡泡腿。属百花岭景区管辖,进景区需交<strong>进山维护费</strong>。</p>
+    </article>
+
+    <article class="entry" id="lushui">
+      <h3 class="entry__name">泸水野温泉一带</h3>
+      <p class="entry__lede">以大量野温泉、怒江边温泉出名。讲述者未亲自泡过,这里只作方向参考——不替他们补齐没验证过的细节。</p>
+    </article>
+  </section>
+
+  <!-- ── Ethics ──────────────────────────────────────────────────────── -->
+  <section class="block ethics" id="ethics">
+    <h2 class="band">有一种温泉,请不要去</h2>
+    <p>徐霞客当年到腾冲,就见过这种野温泉——稍加改造、上面搭个亭子,成了民间澡堂。<strong>近 600 年过去,它至今仍在腾冲民间存在。</strong>完全裸泡,<strong>分单双日</strong>(单日男性、双日女性),不混浴。</p>
+    <p>冬天路不好走,车只能停公路边,再往山下走。一路上会遇到提着水桶、背着娃娃的娘娘,身上冒着热气——她们刚泡完澡、洗完头。<strong>那不是景点,那是当地人洗澡洗头的公共澡堂。</strong></p>
+    <p>讲述者在腾冲两年多,从没公布过它的名字和地址。直到在抖音上看到有外地人把具体位置、路线甚至内部环境全部公开,<strong>拿着手机对着上了年纪的大爹娘娘一顿拍</strong>,以此标榜自己「本地通」。</p>
+    <p><strong>请不要去,也不要转发这类内容。</strong>腾冲已经有太多设施好、价格便宜、服务周到的温泉,不必去和本地人抢那一点点小的生活服务设施。真想去,无非是向别人炫耀「我去了你们没去过的地方」。尊重本地传统,保持距离,保持敬畏。</p>
+  </section>
+
+  <!-- ── Tips ────────────────────────────────────────────────────────── -->
+  <section class="block" id="tips">
+    <h2 class="band">泡汤实用技巧</h2>
+    <ul class="tips">
+      <li><strong>晚点去。</strong>人一多体验必差。大型温泉村 20:00 后团客散尽,营业到 23:00 左右,泡两三小时完全够。</li>
+      <li><strong>带橘子和含糖饮料。</strong>泡久了容易低血糖,也容易头晕(血糖血压上升、轻度脱水)。</li>
+      <li><strong>自带洗漱用品和毛巾。</strong>农家泡池一般不提供。</li>
+      <li><strong>带泳镜泳帽。</strong>部分温泉配有泳池,能游两圈很爽。</li>
+      <li><strong>可以带 iPad。</strong>在池子里追剧是当地人的常规操作,记得用防水袋。</li>
+      <li><strong>泡完吃烧烤。</strong>洞山那条街在泡池之外的最大价值。</li>
+      <li><strong>温度心里有数。</strong>度假村一般 38–42℃(池边有显示屏,可自己调冷热水);农家温泉明显更烫,本地人爱坐近泉眼——别硬学。</li>
+      <li><strong>别逞强泡太久。</strong>每次 1–2 小时为宜,中间起来补水。</li>
+    </ul>
+  </section>
+
+  <!-- ── Plan ────────────────────────────────────────────────────────── -->
+  <section class="block" id="plan">
+    <h2 class="band">两晚怎么排</h2>
+    <div class="plan">
+      <div class="plan__step">
+        <span class="plan__when">第一晚</span>
+        <p><strong>洞山温泉度假村</strong>——先要服务、设施和完整的仪式感。门票含一杯饮品,20:00 后再进场避开团客。</p>
+      </div>
+      <div class="plan__step">
+        <span class="plan__when">第二晚</span>
+        <p><strong>洞山附近的农家温泉</strong>——换一种更本地的体感,约 30 元一间,泡完现场吃一顿烧烤收尾。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Ft4 · Dense colophon ────────────────────────────────────────── -->
+  <footer class="colophon" id="colophon">
+    <p class="colophon__head">版本记 · COLOPHON</p>
+    <p>内容整理自播客《滇南路谈》第十三期《泡在腾冲:从 30 元的农家温泉到五星私汤》,二〇二六年二月三日发布。讲述者:潘大王、楚汉——在腾冲生活两年半,泡过三十多家温泉。</p>
+    <p>本页为个人学习整理,非商业宣传。播客中提到的旅居民宿为其自营项目,此处不收录推广信息。</p>
+    <p class="colophon__caveat">价格、营业时间、水温与经营状况均为录制当时的情形,可能已经变化——尤其是里程较远的几处(底养、河头、腊幸),请出发前电话或看最新点评确认。</p>
+    <p class="colophon__caveat">文字未经授权转载自播客内容,仅作个人参考;如涉版权请联系删除。</p>
+  </footer>
+
+</main>
+</body>
+</html>

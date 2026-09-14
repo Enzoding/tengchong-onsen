@@ -1,0 +1,114 @@
+/* Hallmark · tokens — theme: Garden · genre: editorial
+ * Paper oklch(95.5% 0.022 92) warm oat cream · ink oklch(24% 0.052 152) botanical green-black
+ * Accent oklch(47% 0.13 140) living leaf-green · secondary oklch(54% 0.14 46) earthy clay
+ * ---------------------------------------------------------------------------------------
+ * Garden's upstream pairing is Young Serif + Hanken Grotesk + Geist Mono (Google Fonts).
+ * This build deliberately substitutes a system CJK stack: the audience reads from mainland
+ * China, where Google Fonts is unreachable, and the pre-flight rule is to preserve an
+ * established font stack. The pairing is preserved (serif display / sans body / mono label),
+ * the faces are localized — no external request, no blocked render.
+ * ---------------------------------------------------------------------------------------
+ * Values above oklch L 50% on text roles are lifted into -text tokens so every text colour
+ * clears WCAG AA 4.5:1 against --color-paper. Decorative roles keep the brighter values.
+ */
+
+:root {
+  /* ── Paper (bands: light · tinted toward the anchor, never #fff) ───────── */
+  --color-paper:        oklch(95.5% 0.022 92);
+  --color-paper-2:      oklch(92.5% 0.026 92);
+  --color-paper-3:      oklch(88.5% 0.030 90);
+
+  /* ── Rules ─────────────────────────────────────────────────────────────── */
+  --color-rule:         oklch(83% 0.028 115);
+  --color-rule-2:       oklch(62% 0.045 132);
+
+  /* ── Ink ───────────────────────────────────────────────────────────────── */
+  --color-ink:          oklch(24% 0.052 152);
+  --color-ink-2:        oklch(33% 0.050 150);
+  --color-neutral:      oklch(40% 0.045 142);   /* small labels — 5.6:1 */
+  --color-muted:        oklch(48% 0.040 138);   /* body-size captions only */
+
+  /* ── Accent ────────────────────────────────────────────────────────────── */
+  --color-accent:       oklch(47% 0.13 140);    /* fills, rules, marks */
+  --color-accent-2:     oklch(54% 0.14 46);     /* clay band / ornament */
+  --color-accent-text:  oklch(43% 0.125 140);   /* leaf-green on paper — 4.9:1 */
+  --color-clay-text:    oklch(44% 0.140 40);    /* clay on paper — 4.9:1 */
+  --color-accent-ink:   oklch(96% 0.02 92);     /* text on accent fills */
+
+  /* ── Tints (section bands) ─────────────────────────────────────────────── */
+  --tint-moss:          oklch(47% 0.13 140 / 0.10);
+  --tint-clay:          oklch(54% 0.14 46 / 0.10);
+
+  /* ── Focus ─────────────────────────────────────────────────────────────── */
+  --color-focus:        oklch(47% 0.13 140);
+
+  /* ── Type families (three, counting siblings once) ─────────────────────── */
+  --font-display: "Songti SC", "STSong", "Source Han Serif SC", "Noto Serif CJK SC",
+                  "SimSun", "Times New Roman", Georgia, ui-serif, serif;
+  --font-body:    "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC",
+                  "Noto Sans CJK SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
+  /* label register = the body face + tracking. A CJK page has no small-caps face, so the
+     label "voice" is carried by letter-spacing, not by a fourth family (slop-test gate 38). */
+  --font-label: var(--font-body);
+  /* mono is the outlier register and appears in exactly two slots:
+     the index row numerals and the colophon head. */
+  --font-mono:    ui-monospace, "SF Mono", "SFMono-Regular", Menlo, Consolas,
+                  "Liberation Mono", monospace;
+
+  --display-weight: 700;   /* system CJK serif commits bold or reads as a fallback */
+  --display-style: normal; /* roman — italic headers are banned globally */
+
+  /* ── Type scale ────────────────────────────────────────────────────────── */
+  --text-xs:        0.75rem;
+  --text-sm:        0.875rem;
+  --text-base:      1.0625rem;
+  --text-md:        1.1875rem;
+  --text-lg:        1.375rem;
+  --text-xl:        1.75rem;
+  --text-2xl:       2.25rem;
+  --text-display-s: clamp(1.9rem, 3vw + 1rem, 2.75rem);
+  --text-display:   clamp(2.6rem, 4.6vw + 1rem, 4.25rem);
+
+  /* ── Line height / tracking ────────────────────────────────────────────── */
+  --lh-tight:    1.1;
+  --lh-snug:     1.28;
+  --lh-normal:   1.5;
+  --lh-relaxed:  1.85;
+
+  --tracking-display: -0.006em;
+  --tracking-tight:   -0.004em;
+  --tracking-label:    0.14em;   /* herbarium specimen tags */
+
+  /* ── Space (4pt) ───────────────────────────────────────────────────────── */
+  --space-3xs: 0.25rem;
+  --space-2xs: 0.5rem;
+  --space-xs:  0.75rem;
+  --space-sm:  1rem;
+  --space-md:  1.5rem;
+  --space-lg:  2rem;
+  --space-xl:  3rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6.5rem;
+
+  --measure: 58ch;
+  --page-max: 60rem;
+  --section-gap: 6.5rem;
+
+  /* ── Rules & radii ─────────────────────────────────────────────────────── */
+  --rule-hair:   1px;
+  --rule-heavy:  2px;
+  --radius-card: 10px;
+  --radius-pill: 8px;
+
+  /* ── Motion ────────────────────────────────────────────────────────────── */
+  --ease-out:    cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro:   120ms;
+  --dur-short:   200ms;
+  --dur-med:     320ms;
+
+  /* ── Depth ─────────────────────────────────────────────────────────────── */
+  --z-base:    0;
+  --z-sticky: 10;
+  --z-overlay: 20;
+}

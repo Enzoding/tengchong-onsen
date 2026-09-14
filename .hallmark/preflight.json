@@ -1,0 +1,18 @@
+{
+  "scan_date": "2026-09-14",
+  "project": "tengchong-onsen",
+  "signals": {
+    "design_md": null,
+    "font_stack": "system CJK stack declared in index.html :root (PingFang SC body; no webfont link, no @font-face, no next/font)",
+    "palette": "CSS custom properties in index.html :root (11 tokens, hex + rgba)",
+    "motion_library": "none — two hand-rolled vanilla snippets (scroll progress, IntersectionObserver TOC)",
+    "spacing_scale": "no explicit scale; ad-hoc rem values",
+    "framework": "vanilla HTML, single file, inline <style>"
+  },
+  "decision": {
+    "preserve": ["font stack approach (no external webfonts — mainland-China reachability)", "content and information architecture"],
+    "introduce": ["OKLCH token system in a separate tokens.css", "macrostructure", "microinteraction discipline", "slop-test gates"],
+    "intentional_rebuild": "visual/interaction layer only — the user asked for a second version"
+  },
+  "safety_rail": "index.html (v1) left untouched; Hallmark build is additive at /hallmark/"
+}
