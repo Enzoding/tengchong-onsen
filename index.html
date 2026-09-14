@@ -10,7 +10,7 @@
   :root{
     --ink:rgba(0,0,0,.95);
     --ink-2:#615d59;          /* 次要文字 warm gray 500 */
-    --ink-3:#a39e98;          /* 极淡文字 warm gray 300 */
+    --ink-3:#6f6a65;          /* 小字/标签：暗到满足 WCAG AA (5.3:1) */
     --paper:#ffffff;
     --paper-alt:#f6f5f4;      /* warm white 段间节奏 */
     --rule:rgba(0,0,0,.1);    /* whisper border */
@@ -191,7 +191,7 @@
       background:var(--paper-alt);padding:16px 18px;margin-bottom:44px;
     }
     nav.toc ol{columns:2;column-gap:18px}
-    nav.toc a{padding:4px 0 4px 10px;font-size:13.5px}
+    nav.toc a{padding:11px 0 11px 10px;font-size:13.5px}   /* 高度 ≥44px 触控目标 */
     nav.toc .sub{display:none}
   }
   @media (max-width:30rem){
