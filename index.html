@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>腾冲温泉攻略 · 从 30 元农家泡池到五星私汤</title>
+<meta name="description" content="整理自播客《滇南路谈》第13期：腾冲及滇西 15 处温泉的到达方式、价格、水温、设施与避坑建议。">
+<style>
+  :root{
+    --bg:#14100d;
+    --bg2:#1c1712;
+    --card:#221c16;
+    --line:#3a2f25;
+    --amber:#e8a13a;
+    --amber2:#f6c465;
+    --text:#f2e9dc;
+    --muted:#a89684;
+    --teal:#6fb3a0;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif;
+    line-height:1.75;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:820px;margin:0 auto;padding:0 18px 80px}
+
+  /* ---------- HERO ---------- */
+  header{
+    position:relative;
+    padding:64px 18px 52px;
+    text-align:center;
+    background:
+      radial-gradient(circle at 20% 0%, rgba(232,161,58,.20), transparent 55%),
+      radial-gradient(circle at 85% 15%, rgba(111,179,160,.13), transparent 50%),
+      linear-gradient(180deg,#1c1712 0%,var(--bg) 100%);
+    border-bottom:1px solid var(--line);
+    overflow:hidden;
+  }
+  .steam{
+    font-size:30px;letter-spacing:8px;opacity:.75;margin-bottom:6px;
+    animation:rise 4s ease-in-out infinite;
+  }
+  @keyframes rise{0%,100%{transform:translateY(0);opacity:.55}50%{transform:translateY(-6px);opacity:.9}}
+  header .eyebrow{
+    font-size:12px;letter-spacing:.22em;color:var(--amber);
+    text-transform:uppercase;margin-bottom:14px;
+  }
+  header h1{
+    font-size:clamp(27px,7vw,40px);
+    line-height:1.28;
+    font-weight:800;
+    letter-spacing:-.01em;
+    margin-bottom:14px;
+  }
+  header h1 em{color:var(--amber2);font-style:normal}
+  header p.sub{color:var(--muted);font-size:14.5px;max-width:520px;margin:0 auto}
+  .srcbadge{
+    display:inline-block;margin-top:22px;padding:7px 15px;
+    border:1px solid var(--line);border-radius:999px;
+    font-size:12.5px;color:var(--muted);background:rgba(255,255,255,.02);
+  }
+  .srcbadge b{color:var(--amber2);font-weight:600}
+
+  /* ---------- 速选 ---------- */
+  .quick{margin-top:44px}
+  h2.sec{
+    font-size:20px;font-weight:700;margin:0 0 6px;
+    display:flex;align-items:center;gap:10px;
+  }
+  h2.sec span.num{
+    font-size:12px;font-weight:700;color:var(--bg);
+    background:var(--amber);border-radius:6px;padding:2px 8px;letter-spacing:.04em;
+  }
+  .secnote{color:var(--muted);font-size:13.5px;margin-bottom:22px}
+
+  .quickgrid{display:grid;gap:10px}
+  .qrow{
+    display:flex;gap:14px;align-items:flex-start;
+    background:var(--card);border:1px solid var(--line);border-radius:12px;
+    padding:14px 16px;
+  }
+  .qrow .q{
+    flex:0 0 96px;font-size:13.5px;color:var(--amber2);font-weight:600;
+    border-right:1px solid var(--line);padding-right:12px;line-height:1.5;
+  }
+  .qrow .a{font-size:14px;color:var(--text);opacity:.92}
+
+  /* ---------- 分区 ---------- */
+  section{margin-top:52px}
+  .grouphead{
+    display:flex;align-items:baseline;gap:12px;
+    border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:24px;
+  }
+  .grouphead h3{font-size:17px;font-weight:700}
+  .grouphead .tag{font-size:11.5px;color:var(--muted)}
+
+  /* ---------- 卡片 ---------- */
+  .card{
+    background:linear-gradient(180deg,var(--card),#1e1913);
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:20px;
+    margin-bottom:16px;
+    position:relative;
+  }
+  .card.star{border-color:#6b4d1e;box-shadow:0 0 0 1px rgba(232,161,58,.12) inset}
+  .card h4{
+    font-size:17.5px;font-weight:700;margin-bottom:10px;
+    display:flex;align-items:center;gap:8px;flex-wrap:wrap;
+  }
+  .pill{
+    font-size:11px;font-weight:600;padding:3px 9px;border-radius:999px;
+    background:rgba(232,161,58,.14);color:var(--amber2);border:1px solid rgba(232,161,58,.28);
+    letter-spacing:.02em;
+  }
+  .pill.t{background:rgba(111,179,160,.13);color:var(--teal);border-color:rgba(111,179,160,.3)}
+  .pill.w{background:rgba(214,110,90,.13);color:#e08f7d;border-color:rgba(214,110,90,.3)}
+  .lead{font-size:14.5px;color:#ded2c2;margin-bottom:14px}
+
+  dl{display:grid;grid-template-columns:76px 1fr;gap:7px 14px;font-size:14px}
+  dt{color:var(--muted);font-size:13px;padding-top:2px}
+  dd{color:#e9dfd2}
+  dd b{color:var(--amber2);font-weight:600}
+  .money{color:#8fd1a8;font-weight:600}
+
+  .tip{
+    margin-top:14px;padding:11px 14px;border-radius:10px;
+    background:rgba(232,161,58,.07);border-left:3px solid var(--amber);
+    font-size:13.5px;color:#e3d5c0;
+  }
+  .tip.warn{background:rgba(214,110,90,.08);border-left-color:#d66e5a}
+  .tip .k{color:var(--amber2);font-weight:700}
+
+  /* ---------- 清单 ---------- */
+  ul.check{list-style:none;display:grid;gap:11px}
+  ul.check li{
+    font-size:14.5px;padding-left:28px;position:relative;color:#e6dbcc;
+  }
+  ul.check li:before{
+    content:"✓";position:absolute;left:0;top:0;color:var(--teal);font-weight:700;
+  }
+  ul.check li b{color:var(--amber2)}
+
+  /* ---------- 行程 ---------- */
+  .day{
+    background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:18px 20px;margin-bottom:12px;
+  }
+  .day .dnum{
+    font-size:12px;letter-spacing:.14em;color:var(--amber);font-weight:700;margin-bottom:8px;
+  }
+  .day p{font-size:14.5px;color:#e6dbcc}
+
+  /* ---------- 伦理提醒 ---------- */
+  .ethics{
+    background:linear-gradient(180deg,#2a1a16,#201612);
+    border:1px solid #5a3026;border-left:4px solid #d66e5a;
+    border-radius:14px;padding:22px;
+  }
+  .ethics h3{color:#f0a68f;font-size:17px;margin-bottom:12px}
+  .ethics p{font-size:14.5px;color:#e8d6cd;margin-bottom:10px}
+  .ethics p:last-child{margin-bottom:0}
+
+  footer{
+    margin-top:60px;padding-top:24px;border-top:1px solid var(--line);
+    font-size:13px;color:var(--muted);line-height:1.9;
+  }
+  footer a{color:var(--amber2);text-decoration:none;border-bottom:1px dotted rgba(232,161,58,.5)}
+  .disc{
+    background:rgba(255,255,255,.025);border:1px solid var(--line);border-radius:10px;
+    padding:14px 16px;margin-top:16px;font-size:12.5px;color:var(--muted);
+  }
+  @media(max-width:520px){
+    dl{grid-template-columns:1fr;gap:2px 0}
+    dt{margin-top:8px}
+    .qrow{flex-direction:column;gap:6px}
+    .qrow .q{border-right:0;border-bottom:1px solid var(--line);padding:0 0 6px;flex:none}
+    .card{padding:17px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="steam">♨</div>
+  <div class="eyebrow">腾冲 · 滇西</div>
+  <h1>泡在腾冲<br><em>从 30 元农家泡池到五星私汤</em></h1>
+  <p class="sub">15 处温泉的到达方式、真实价格、水温手感与避坑提示。整理自一对在腾冲生活两年半、泡过 30+ 家温泉的旅居者。</p>
+  <div class="srcbadge">素材来源：播客 <b>《滇南路谈》第 13 期</b>（2026-02-03）</div>
+</header>
+
+<div class="wrap">
+
+  <!-- 速选 -->
+  <section class="quick">
+    <h2 class="sec"><span class="num">速选</span>按你的情况，直接抄</h2>
+    <p class="secnote">先对号入座，再往下看细节。</p>
+    <div class="quickgrid">
+      <div class="qrow"><div class="q">住在市区<br>不自驾</div><div class="a">首选 <b>洞山温泉度假村</b>（打车不到 20 分钟，设施最完善）；其次 <b>杜鹃王森林温泉</b>（和顺附近）、<b>柏联</b>（和顺古镇内）、<b>悦椿</b>。</div></div>
+      <div class="qrow"><div class="q">想最省钱<br>最本地</div><div class="a"><b>洞山村农家温泉一条街</b>：约 30 元一间泡池，2–3 人私享，泡一晚。泡完在街上吃烧烤。</div></div>
+      <div class="qrow"><div class="q">要拍照<br>要出片</div><div class="a"><b>河头天然温泉</b>（高黎贡山腰、群山视野、水质清澈见底，需自驾 1–2 小时）；<b>玛御谷私汤</b>（不到 100 元，装修精致带阳台）。</div></div>
+      <div class="qrow"><div class="q">自驾野趣</div><div class="a"><b>河头天然温泉</b>、<b>腊幸供销社温泉</b>（老牌硫磺泉，看星空佳）；顺路串 <b>云峰山 / 银杏村</b>。</div></div>
+      <div class="qrow"><div class="q">深度滇西</div><div class="a"><b>坐船去的底养温泉</b>（梁河）、<b>邦腊掌</b>（龙陵，宜住一晚）、<b>登梗澡堂</b>（怒江边）、<b>洱源</b>（边泡边看电影+喝牛奶）。</div></div>
+      <div class="qrow"><div class="q">只想泡脚</div><div class="a"><b>玛御谷公交站泡脚池</b>：全天流动温泉水，免费，比东湖那个宽敞得多（东湖人挤到插不进脚）。</div></div>
+    </div>
+  </section>
+
+  <!-- 一、腾冲市区周边 -->
+  <section>
+    <div class="grouphead"><h3>一、腾冲 · 打车就能到</h3><span class="tag">无车党看这里</span></div>
+
+    <div class="card star">
+      <h4>洞山村农家温泉一条街 <span class="pill">最本地</span><span class="pill">最便宜</span></h4>
+      <p class="lead">219 国道边一整条街的农家泡池。农户自家院子或一楼改成一个个小单间，简陋、但极有本地生活气。当地地热富裕到「排水沟里流的都是温泉水」。</p>
+      <dl>
+        <dt>导航</dt><dd>「腾冲洞山温泉村」（腾冲城南约 6 公里，离市区开车约 <b>5 分钟</b>）</dd>
+        <dt>价格</dt><dd><span class="money">约 30 元 / 间泡池</span>（2–3 人），名义泡 2–3 小时，实际基本不限时</dd>
+        <dt>水温</dt><dd><b>明显偏烫</b>，比度假村高；老板会给你配冷热水。本地人耐受度高，爱坐近泉眼</dd>
+        <dt>设施</dt><dd>铺瓷砖的浴室 + 砌一个池子（约 2 m³，房间 4–5 ㎡）、一个淋浴、几把板凳、一排挂钩。<b>无景致、不提供洗漱用品</b></dd>
+        <dt>周边</dt><dd>街上烧烤小吃多，也有卖泳衣的（<b>小几十元</b>一套，不用提前买）</dd>
+      </dl>
+      <div class="tip"><span class="k">店主</span>性情温和、非常好打交道——那种性格平和的腾冲人。泡完又饿又困，正好在街上吃一顿烧烤。</div>
+      <div class="tip warn"><span class="k">避坑</span>节气（如小雪）和周末会挤爆，周边城市（云 A、云 L）车牌很多，常连找四五家都没池子。<b>务必错峰或提前问。</b></div>
+    </div>
+
+    <div class="card star">
+      <h4>洞山温泉度假村 <span class="pill">不自驾首选</span><span class="pill t">设施最全</span></h4>
+      <p class="lead">整条街上规模最大的一家，一整个大型温泉集合体，也是最适合游客的一家：便利、体面、价格却没飘。</p>
+      <dl>
+        <dt>到达</dt><dd>打车从市区 <b>不到 20 分钟</b>；营业到 <b>23:00 左右</b>（部分时令到 23:20）</dd>
+        <dt>门票</dt><dd><span class="money">约 50 元</span>，<b>含一杯饮品</b>（牛奶或咖啡）</dd>
+        <dt>玩法</dt><dd>入口处 6–7 个功能大池（牛奶浴、中药药浴、白酒池…），池上有配方说明</dd>
+        <dt>内场</dt><dd>往里走有近 <b>20 个小池</b>，以腾冲乡镇命名（腾越池、曲石池…），不规则形状、鹅卵石与丛林环绕，<b>3–5 人刚好，私密性极好</b></dd>
+        <dt>加分</dt><dd>按摩池（按一下感应装置，背部和脚底喷水柱）、人造沙滩与游泳池、可躺看星空的露天池</dd>
+        <dt>水温</dt><dd>约 <b>38–42℃</b>，每个池边都有显示屏报温度</dd>
+        <dt>吃饭</dt><dd>里面有食堂：炒饭、米线、饵丝等本地特色，<b>米线饵丝不到 10 元</b>，味道不错</dd>
+      </dl>
+      <div class="tip"><span class="k">关键技巧</span>这里也有旅行团。<b>晚上 8 点后再进去</b>，团客已散，人少体验翻倍；泡两三个小时完全够。</div>
+    </div>
+
+    <div class="card">
+      <h4>杜鹃王森林温泉 <span class="pill">和顺附近</span></h4>
+      <p class="lead">和洞山温泉村同一水准的服务：进门给浴袍、防水手机袋，流程规范，环境舒服，周边是高大的松树林。</p>
+      <dl>
+        <dt>位置</dt><dd>和顺古镇附近，打车方便</dd>
+        <dt>适合</dt><dd>想安静泡一场、又不想跑远的</dd>
+      </dl>
+    </div>
+
+    <div class="card">
+      <h4>柏联温泉 · 悦椿温泉 <span class="pill">市区可打车</span></h4>
+      <p class="lead">柏联在<b>和顺古镇里面</b>；悦椿在市区方向。都属于设施成熟的品牌温泉，适合作为备选。</p>
+    </div>
+
+    <div class="card">
+      <h4>玛御谷私汤 <span class="pill">高性价比私汤</span></h4>
+      <p class="lead">玛御谷是当地比较豪华的旅居小区，里面的私汤包间性价比意外地好。</p>
+      <dl>
+        <dt>价格</dt><dd><span class="money">不到 100 元 / 泡池</span></dd>
+        <dt>空间</dt><dd>约 10 ㎡ 小套间 + 小阳台，池子约 2 ㎡；地板、墙面、天花板装修都明显好过农家温泉，阳台外有植被</dd>
+      </dl>
+      <div class="tip"><span class="k">免费彩蛋</span><b>玛御谷公交站的泡脚池</b>——全天有流动温泉水，免费。面积比东湖那个大得多，总能找到位置；坐一排泡脚很容易聊起来，是当地人的社交场。东湖附近也有一个泡脚池，但人多到肩并肩脚挨脚，很难插进去。</div>
+    </div>
+  </section>
+
+  <!-- 二、自驾 -->
+  <section>
+    <div class="grouphead"><h3>二、腾冲 · 自驾者的野趣</h3><span class="tag">车越硬派越好</span></div>
+
+    <div class="card star">
+      <h4>河头天然温泉 <span class="pill">最出片</span><span class="pill w">路陡</span></h4>
+      <p class="lead">在高黎贡山山腰的河头村。山头视野、茂密植被、大池子、水质清澈见底——随手拍发小红书就火了。</p>
+      <dl>
+        <dt>路线</dt><dd>腾冲往北到<b>曲石镇</b>，再往山上走；高德地图可直接搜到</dd>
+        <dt>车程</dt><dd>市区出发 <b>1–2 小时</b>；路面已硬化，但<b>坡度大</b>，新手司机要留神</dd>
+        <dt>顺带</dt><dd>河头有养殖<b>三文鱼</b>的人家，可以直接吃；村边还有<b>徒步高黎贡的路线起点</b>，可问当地老板或看路牌找向导——一趟同时满足徒步 + 泡温泉</dd>
+      </dl>
+    </div>
+
+    <div class="card">
+      <h4>腊幸供销社温泉 <span class="pill">老牌硫磺泉</span><span class="pill t">适合看星空</span></h4>
+      <p class="lead">名字里的「供销社」就暴露了它的资历——当地非常老牌的一家硫磺泉，一进院子就能闻到那股味道。</p>
+      <dl>
+        <dt>位置</dt><dd>腾冲以北的<b>滇滩镇</b>，已很接近缅甸</dd>
+        <dt>价格</dt><dd>不贵，设施规模很大；但<b>团客多</b>（大巴一车车拉中老年人来）</dd>
+        <dt>加分</dt><dd>光污染少，<b>晚上适合看星空</b></dd>
+        <dt>沿线</dt><dd>云峰山、银杏村——可以串成一条线</dd>
+      </dl>
+      <div class="tip warn"><span class="k">注意</span>更衣间卫生条件偏简陋。如果想舒服点，<b>可以直接在温泉住一晚</b>，换衣冲澡环境会好很多。</div>
+    </div>
+
+    <div class="card">
+      <h4>腊幸野温泉 <span class="pill">露天泉眼</span><span class="pill w">已商业化</span></h4>
+      <p class="lead">完全露天的泉眼，温泉水直接冒出来，温度很高，所以泉眼被围了起来，旁边又新辟了若干小泡池。</p>
+      <dl>
+        <dt>变迁</dt><dd>最早<b>完全免费</b> → 后来泡脚 5 元/人 → 现在加了设施可泡澡、可游泳，价格也涨了，<b>已成旅行大巴的打卡点</b></dd>
+      </dl>
+    </div>
+  </section>
+
+  <!-- 三、滇西 -->
+  <section>
+    <div class="grouphead"><h3>三、滇西延伸 · 值得专程</h3><span class="tag">离开腾冲周边</span></div>
+
+    <div class="card star">
+      <h4>梁河 · 底养温泉 <span class="pill">要坐船去</span><span class="pill t">体验天花板</span></h4>
+      <p class="lead">临江而建，主体是两个大泳池（约标准泳池大小）：左边多是男性，右边是女性和小孩。泡在江边看晚霞、听江水声，是当地人两年多里给出的顶级体验之一。</p>
+      <dl>
+        <dt>怎么去</dt><dd>山路很不好走。<b>推荐坐轮渡</b>：到码头坐船，逆江而上 <b>10–15 分钟</b> 即到（越野车 + 老司机也可考虑开车，但要掂量）</dd>
+        <dt>水情</dt><dd>位于<b>梁河温泉最上游</b>——本地大哥说下面的水都从这儿流过去，所以这里的水最好</dd>
+        <dt>环境</dt><dd>石头砌的水池，男女更衣室各一间（铁棚搭的），有热水淋浴，条件确实一般；下船是一片<b>鹅卵石江滩</b>，常有人在那烧烤</dd>
+      </dl>
+      <div class="tip"><span class="k">最好的时刻</span>夕阳将临前坐船抵达，靠在临江一侧看晚霞（方向不直接对日落，但江边晚霞极美）。</div>
+      <div class="tip warn"><span class="k">提醒</span>本地人很多，<b>外地女性单独前往可能不太敢下水</b>——上次八人（四男四女）只有三人真泡了。建议先搜照片评估自己的接受度。<b>另：元旦时有朋友去说正在整修，出发前务必确认营业。</b></div>
+    </div>
+
+    <div class="card">
+      <h4>怒江 · 登梗澡堂 <span class="pill">怒江边</span><span class="pill w">很野很土</span></h4>
+      <p class="lead">紧挨着怒江湍急流水建的一片小池子，就在国道旁。本地人在此泡澡，甚至有老娘娘直接裸泡——这已是当地的文化习惯，没人觉得羞耻。</p>
+      <dl>
+        <dt>位置</dt><dd>接近泸水的方向</dd>
+        <dt>看点</dt><dd>在澡堂就能看到修建在怒江江上的<b>溜索</b></dd>
+      </dl>
+      <div class="tip warn"><span class="k">提醒</span>几乎没有更衣室和淋浴，就地脱衣泡。环境简陋，介意者绕开；想去请先搜照片量力而行。</div>
+    </div>
+
+    <div class="card">
+      <h4>龙陵 · 邦腊掌温泉（谐音「不老汤」） <span class="pill">宜住一晚</span><span class="pill t">配套齐全</span></h4>
+      <p class="lead">藏在深山里的封闭式度假区，温泉区和酒店区是分开的。规模极大，很适合安排过夜。</p>
+      <dl>
+        <dt>到达</dt><dd>去温泉需在酒店前台叫<b>摆渡车</b></dd>
+        <dt>规模</dt><dd>温泉池约 <b>五六十个</b>；有一面山坡全是温泉泉眼（像缩小版热海），景区中间有河流过，河旁多处冒热气</dd>
+        <dt>鱼疗</dt><dd>进区先是大鱼池 + 小鱼池。<b>大鱼池的鱼有半个脚掌大</b>，啄起来有点疼；小鱼池体验好，鱼不怕人，会围着手转，很痒很舒服</dd>
+        <dt>价格</dt><dd>可单买温泉票；<b>推荐住一晚</b>——家庭套房约 <span class="money">500 元</span>（滇西算高价，但摊下来划算），住宿条件好、维护到位，房间望出去是大泳池和小山丘</dd>
+        <dt>餐饮</dt><dd>早中晚都能在度假村解决（<b>点不到外卖</b>）；早上在餐厅外能看到黄臀鹎、红臀鹎等小鸟</dd>
+      </dl>
+      <div class="tip"><span class="k">客群</span>本地人来得多，氛围接地气。</div>
+    </div>
+
+    <div class="card">
+      <h4>大理 · 洱源温泉 <span class="pill">边泡边看电影</span></h4>
+      <p class="lead">大型温泉酒店（房间一晚大几百）。最妙的设计：在巨大泳池中央立了一块巨幕，旁边架投影仪——泡在池子里直接看电影，被戏称「滇西版汽车影院」。周边沙滩椅、饮料、零食齐全，很像豪华度假村。</p>
+      <dl>
+        <dt>必做</dt><dd>洱源是洱海的源头，<b>买一份新鲜牛奶边泡边喝</b></dd>
+        <dt>周边</dt><dd>茈碧湖、西湖，景色很好；<b>一直不算旅游热门地</b>，去大理不想挤人群就选这里，烧烤也很好吃</dd>
+      </dl>
+    </div>
+
+    <div class="card">
+      <h4>百花岭 · 阴阳泉（徒步线上的野温泉） <span class="pill">徒步顺路</span></h4>
+      <p class="lead">百花岭徒步路线上的一片野温泉：一池水温高、一池水温低，故名阴阳泉。人泡得进去，但<b>完全没地方换衣服</b>，通常只能泡泡腿。</p>
+      <dl>
+        <dt>门票</dt><dd>属百花岭景区管辖，进景区需交<b>进山维护费</b></dd>
+      </dl>
+    </div>
+
+    <div class="card">
+      <h4>泸水一带 <span class="pill">野温泉密集</span></h4>
+      <p class="lead">以大量野温泉、怒江边温泉出名。播客主未亲自泡过，仅作方向参考。</p>
+    </div>
+  </section>
+
+  <!-- 四、伦理 -->
+  <section>
+    <div class="grouphead"><h3>四、写在攻略之外：一种温泉，请不要去</h3><span class="tag">重要</span></div>
+    <div class="ethics">
+      <h3>关于腾冲民间的「裸泡澡堂」</h3>
+      <p>徐霞客当年到腾冲，就见过这种野温泉——稍加改造、上面搭个亭子，成了民间澡堂。<b>近 600 年过去，它至今仍在腾冲民间存在。</b>完全裸泡，<b>分单双日</b>（单日男性、双日女性），不混浴。</p>
+      <p>冬天路不好走，车只能停公路边，再往山下走。一路上会遇到提着水桶、背着娃娃的娘娘，身上冒着热气——她们刚泡完澡、洗完头。<b>那不是景点，那是当地人洗澡洗头的公共澡堂。</b></p>
+      <p>播客主讲他们在腾冲两年多，从没公布过这个温泉的名字和地址。直到在抖音上看到有外地人把具体位置、路线甚至内部环境全部公开，<b>拿着手机对着上了年纪的大爹娘娘一顿拍</b>，以此标榜自己「本地通」。</p>
+      <p><b>请不要去，也不要转发这类内容。</b>腾冲已经有太多设施好、价格便宜、服务周到的温泉；不必去和本地人抢那一点点小的生活服务设施。真想去，无非是向别人炫耀「我去了你们没去过的地方」。</p>
+      <p>尊重本地传统，保持距离，保持敬畏。</p>
+    </div>
+  </section>
+
+  <!-- 五、技巧 -->
+  <section>
+    <div class="grouphead"><h3>五、泡汤实用技巧</h3><span class="tag">出发前过一遍</span></div>
+    <ul class="check">
+      <li><b>晚点去。</b>人一多体验必差。大型温泉村 20:00 后团客散尽；营业到 23:00–23:30，泡两三小时完全够。</li>
+      <li><b>带橘子和含糖饮料。</b>泡久了容易低血糖，也容易头晕（血糖血压上升、轻度脱水）。</li>
+      <li><b>自带洗漱用品。</b>农家泡池一般不提供，毛巾也建议自备。</li>
+      <li><b>带泳镜泳帽。</b>部分温泉配有泳池，能游两圈很爽。</li>
+      <li><b>可以带 iPad。</b>在池子里追剧是当地人的常规操作（用防水袋）。</li>
+      <li><b>泡完吃烧烤。</b>洞山那条街在泡池之外的最大价值。</li>
+      <li><b>温度心里有数。</b>度假村一般 38–42℃（池边有显示屏，可自己调冷热水）；农家温泉明显更烫，本地人爱坐近泉眼——别硬学。</li>
+      <li><b>别逞强泡太久。</b>每次 1–2 小时为宜，中间起来补水。</li>
+      <li><b>两天连泡的排法</b>：第一晚 <b>洞山温泉度假村</b>（享受服务与设施）；第二晚去附近的<b>农家温泉</b>（更本地），泡完现场吃烧烤。</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p><b>关于这份攻略</b></p>
+    <p>内容整理自播客《滇南路谈》第 13 期《泡在腾冲：从 30 元的农家温泉到五星私汤》（发布 2026-02-03），讲述者是在腾冲生活两年半、泡过 30+ 家温泉的两位旅居者潘大王与楚汉。</p>
+    <div class="disc">
+      ⚠️ 价格、营业时间、水温与经营状况均为播客录制时（2026 年初）的情况，可能已变化——尤其里程较远的温泉（底养、河头、腊幸）请出发前电话或最新点评确认。<br>
+      本页为个人学习整理，非商业宣传；文中提到的「旅居民宿」为其自营项目，此处不收录推广信息。
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
